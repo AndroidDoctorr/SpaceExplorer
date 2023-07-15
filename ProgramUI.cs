@@ -2,11 +2,15 @@ public class ProgramUI {
     private Planet _currentPlanet = PlanetData.earth;
     public float FuelLevel = 50.0f;
     public void Run() {
+        // TODO: Put this inside a keepRunning loop, add a Quit Game option
         Console.Clear();
         Console.WriteLine($"You are on {_currentPlanet.Name}. What would you like to do?");
         Console.WriteLine($"1. Travel");
         Console.WriteLine($"2. Explore");
         Console.WriteLine($"3. Mine");
+
+        Console.Write("Selection: ");
+        string selection = Console.ReadLine();
 
         Planet planet = PlanetData.xeebl;
 
